@@ -7,6 +7,8 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 //Definindo Rotas
 import { RouterModule } from '@angular/router';
+//Importando o Módulo Bootstrap
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
 import { BsNavbarComponent } from './bs-navbar/bs-navbar.component';
@@ -19,6 +21,8 @@ import { MyOrdersComponent } from './my-orders/my-orders.component';
 import { AdminProdutosComponent } from './admin/admin-produtos/admin-produtos.component';
 import { AdminOrdersComponent } from './admin/admin-orders/admin-orders.component';
 import { LoginComponent } from './login/login.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,6 +43,9 @@ import { LoginComponent } from './login/login.component';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
+    //Módulo BootStrap
+    NgbModule,
+    //NgbModule.forRoot(),
     RouterModule.forRoot([
       {path: '', component: HomeComponent}, 
       {path: 'produtos', component: ProdutosComponent},
